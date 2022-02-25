@@ -1,0 +1,81 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-04T09:08:14.959Z",
+        "line": 2,
+        "name": "To verify the user is able to search for an item in the application",
+        "description": "",
+        "id": "search-functionality;to-verify-the-user-is-able-to-search-for-an-item-in-the-application",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3998700,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": ": User is in home page",
+            "match": {
+              "location": "StepDefinition.Step_Def.user_is_in_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 4,
+            "name": ": User click on the Search edit box",
+            "match": {
+              "location": "StepDefinition.Step_Def.user_click_on_the_search_edit_box()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 5,
+            "name": ": User enter the item name in Search edit box",
+            "match": {
+              "location": "StepDefinition.Step_Def.user_enter_the_item_name_in_search_edit_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": ": User click the Search button",
+            "match": {
+              "location": "StepDefinition.Step_Def.user_click_the_search_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": ": Products will appears",
+            "match": {
+              "location": "StepDefinition.Step_Def.products_will_appears()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search Functionality",
+    "description": "",
+    "id": "search-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/Search.feature",
+    "tags": []
+  }
+]

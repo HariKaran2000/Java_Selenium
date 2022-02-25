@@ -1,0 +1,18 @@
+package practice;
+
+public class StudentDetails extends students {
+	public static void main(String[] args) {
+		students[] stuobj = new students[2];
+		stuobj[0] = new students();
+		stuobj[1] = new students();
+		stuobj[0].sturoll = 102;
+		stuobj[1].sturoll = 103;
+		System.out.println(stuobj[0].sturoll);
+		System.out.println(stuobj[1].sturoll);
+		
+		
+		
+		
+	}
+
+}

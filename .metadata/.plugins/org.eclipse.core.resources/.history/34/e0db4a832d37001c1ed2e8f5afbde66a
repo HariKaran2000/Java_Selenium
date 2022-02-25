@@ -1,0 +1,26 @@
+package practice;
+
+public class StudentDetails  {
+	public static void main(String[] args) {
+		int i,m = 0; 
+		int num = 17;
+		
+		m = num / 2;
+		
+		if(num == 0 || num == 1) {
+			System.out.println(num + "is not a prime number");
+			
+		}
+		for (i = 2; i<num/2;i++) {
+			if(num/2 == 0) {
+				System.out.println(num + "is not a prime number");
+				break;
+			}else {
+				System.out.println(num + "is a prime number");
+				break;
+			}
+		}
+		
+		
+}
+}

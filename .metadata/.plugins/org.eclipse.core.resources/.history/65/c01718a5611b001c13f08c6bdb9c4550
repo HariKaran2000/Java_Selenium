@@ -1,0 +1,9 @@
+package assignment;
+
+public class Circle extends Shape {
+	public void circleMethod() {
+		System.out.println("This is Circle Shape");
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package assignment;
+
+public class Shape {
+	
+	public void ShapeMethod() {
+		System.out.println("Shape method" + "This is Shape");
+		
+	}
+
+}

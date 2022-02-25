@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 12 16:25:26 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>130 seconds (130983 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Runner.Test_Runner.runScenario()'><b>runScenario</b><br>Test class: Runner.Test_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify user is able to Register For Personal account", "Optional[Register Functionality]"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button name=&quot;EMAIL_REG_FORM_SUBMIT&quot; id=&quot;EMAIL_REG_FORM_SUBMIT&quot; class=&quot;btn btn--primary btn--large btn--fluid&quot; disabled=&quot;&quot; type=&quot;submit&quot; aria-describedby=&quot;legalTextId&quot; data-click-tracking-data=&quot;{&amp;quot;linkId&amp;quot;:47252,&amp;quot;pageId&amp;quot;:&amp;quot;2560839&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;_plsr&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;RegModuleName&amp;quot;:&amp;quot;PARTIAL_REG_PERSONAL_EMAIL&amp;quot;,&amp;quot;bs&amp;quot;:203,&amp;quot;ul&amp;quot;:&amp;quot;en-US&amp;quot;,&amp;quot;uc&amp;quot;:95}}&quot;&gt;...&lt;/button&gt; is not clickable at point (508, 551). Other element would receive the click: &lt;iframe id=&quot;captchaFrame&quot; src=&quot;/captcharouter_challenge?ap=1&amp;amp;iim=wNDkuMV&amp;amp;iia=YmjA1LjcA&amp;amp;iiz=DoBg2Ljc4WCL&amp;amp;ru=https%3A%2F%2Fsignup.ebay.com%2Fajax%2Fvalidatefield&amp;amp;iid=763a3057-8814-44be-a7b1-761114ed02c1&quot; style=&quot;position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; border: 0px; background-color: white; z-index: 99999;&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=94.0.4606.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N4DS0TK&apos;, ip: &apos;192.168.42.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12afeee9f6fd490747d72df06ba176f9
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.Register.Preg(Register.java:79)
+	at StepDefinition.Register_StepDef.user_clicks_on_the_register_button(Register_StepDef.java:33)
+	at ?.User clicks on the Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Reg.feature:6)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace104070545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace104070545'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button name=&quot;EMAIL_REG_FORM_SUBMIT&quot; id=&quot;EMAIL_REG_FORM_SUBMIT&quot; class=&quot;btn btn--primary btn--large btn--fluid&quot; disabled=&quot;&quot; type=&quot;submit&quot; aria-describedby=&quot;legalTextId&quot; data-click-tracking-data=&quot;{&amp;quot;linkId&amp;quot;:47252,&amp;quot;pageId&amp;quot;:&amp;quot;2560839&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;_plsr&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;RegModuleName&amp;quot;:&amp;quot;PARTIAL_REG_PERSONAL_EMAIL&amp;quot;,&amp;quot;bs&amp;quot;:203,&amp;quot;ul&amp;quot;:&amp;quot;en-US&amp;quot;,&amp;quot;uc&amp;quot;:95}}&quot;&gt;...&lt;/button&gt; is not clickable at point (508, 551). Other element would receive the click: &lt;iframe id=&quot;captchaFrame&quot; src=&quot;/captcharouter_challenge?ap=1&amp;amp;iim=wNDkuMV&amp;amp;iia=YmjA1LjcA&amp;amp;iiz=DoBg2Ljc4WCL&amp;amp;ru=https%3A%2F%2Fsignup.ebay.com%2Fajax%2Fvalidatefield&amp;amp;iid=763a3057-8814-44be-a7b1-761114ed02c1&quot; style=&quot;position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; border: 0px; background-color: white; z-index: 99999;&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=94.0.4606.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N4DS0TK&apos;, ip: &apos;192.168.42.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 12afeee9f6fd490747d72df06ba176f9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.Register.Preg(Register.java:79)
+	at StepDefinition.Register_StepDef.user_clicks_on_the_register_button(Register_StepDef.java:33)
+	at ?.User clicks on the Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Reg.feature:6)
+</pre></div></td>
+<td>42</td>
+<td>Runner.Test_Runner@5b03b9fe</td></tr>
+<tr>
+<td title='Runner.Test_Runner.runScenario()'><b>runScenario</b><br>Test class: Runner.Test_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify user is able to Register for Business account", "Optional[Register Functionality]"</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=94.0.4606.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N4DS0TK&apos;, ip: &apos;192.168.42.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54527}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0aa7f620bf86c657c1fbe986f857844a
+*** Element info: {Using=xpath, value=//*[@id=&quot;BUSINESS_REG_FORM_SUBMIT&quot;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.Register.Breg(Register.java:105)
+	at StepDefinition.Register_StepDef.click_on_register_button(Register_StepDef.java:53)
+	at ?.click on Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Reg.feature:19)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace855206842", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace855206842'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=94.0.4606.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N4DS0TK&apos;, ip: &apos;192.168.42.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54527}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0aa7f620bf86c657c1fbe986f857844a
+*** Element info: {Using=xpath, value=//*[@id=&quot;BUSINESS_REG_FORM_SUBMIT&quot;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.Register.Breg(Register.java:105)
+	at StepDefinition.Register_StepDef.click_on_register_button(Register_StepDef.java:53)
+	at ?.click on Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Reg.feature:19)
+</pre></div></td>
+<td>48</td>
+<td>Runner.Test_Runner@5b03b9fe</td></tr>
+<tr>
+<td title='Runner.Test_Runner.runScenario()'><b>runScenario</b><br>Test class: Runner.Test_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify user is able to Register For Personal account", "Optional[Register Functionality]"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button name=&quot;EMAIL_REG_FORM_SUBMIT&quot; id=&quot;EMAIL_REG_FORM_SUBMIT&quot; class=&quot;btn btn--primary btn--large btn--fluid&quot; disabled=&quot;&quot; type=&quot;submit&quot; aria-describedby=&quot;legalTextId&quot; data-click-tracking-data=&quot;{&amp;quot;linkId&amp;quot;:47252,&amp;quot;pageId&amp;quot;:&amp;quot;2560839&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;_plsr&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;RegModuleName&amp;quot;:&amp;quot;PARTIAL_REG_PERSONAL_EMAIL&amp;quot;,&amp;quot;bs&amp;quot;:203,&amp;quot;ul&amp;quot;:&amp;quot;en-US&amp;quot;,&amp;quot;uc&amp;quot;:95}}&quot;&gt;...&lt;/button&gt; is not clickable at point (508, 390). Other element would receive the click: &lt;iframe id=&quot;captchaFrame&quot; src=&quot;/captcharouter_challenge?ap=1&amp;amp;iim=ONDkuMz&amp;amp;iia=yyjA1LjQl&amp;amp;iiz=wVQg2Ljc4SAh&amp;amp;ru=https%3A%2F%2Fsignup.ebay.com%2Fajax%2Fvalidatefield&amp;amp;iid=a62fcf72-fe2f-4ff8-8552-595d06325d71&quot; style=&quot;position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; border: 0px; background-color: white; z-index: 99999;&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=94.0.4606.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N4DS0TK&apos;, ip: &apos;192.168.42.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54771}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b23c0bddcb50779a3c6d7648073b63fb
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.Register.Preg(Register.java:79)
+	at StepDefinition.Register_StepDef.user_clicks_on_the_register_button(Register_StepDef.java:33)
+	at ?.User clicks on the Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Reg.feature:6)
+... Removed 9 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace378693799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace378693799'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button name=&quot;EMAIL_REG_FORM_SUBMIT&quot; id=&quot;EMAIL_REG_FORM_SUBMIT&quot; class=&quot;btn btn--primary btn--large btn--fluid&quot; disabled=&quot;&quot; type=&quot;submit&quot; aria-describedby=&quot;legalTextId&quot; data-click-tracking-data=&quot;{&amp;quot;linkId&amp;quot;:47252,&amp;quot;pageId&amp;quot;:&amp;quot;2560839&amp;quot;,&amp;quot;type&amp;quot;:&amp;quot;_plsr&amp;quot;,&amp;quot;payload&amp;quot;:{&amp;quot;RegModuleName&amp;quot;:&amp;quot;PARTIAL_REG_PERSONAL_EMAIL&amp;quot;,&amp;quot;bs&amp;quot;:203,&amp;quot;ul&amp;quot;:&amp;quot;en-US&amp;quot;,&amp;quot;uc&amp;quot;:95}}&quot;&gt;...&lt;/button&gt; is not clickable at point (508, 390). Other element would receive the click: &lt;iframe id=&quot;captchaFrame&quot; src=&quot;/captcharouter_challenge?ap=1&amp;amp;iim=ONDkuMz&amp;amp;iia=yyjA1LjQl&amp;amp;iiz=wVQg2Ljc4SAh&amp;amp;ru=https%3A%2F%2Fsignup.ebay.com%2Fajax%2Fvalidatefield&amp;amp;iid=a62fcf72-fe2f-4ff8-8552-595d06325d71&quot; style=&quot;position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; border: 0px; background-color: white; z-index: 99999;&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=94.0.4606.81)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-N4DS0TK&apos;, ip: &apos;192.168.42.87&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54771}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b23c0bddcb50779a3c6d7648073b63fb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.Register.Preg(Register.java:79)
+	at StepDefinition.Register_StepDef.user_clicks_on_the_register_button(Register_StepDef.java:33)
+	at ?.User clicks on the Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Reg.feature:6)
+</pre></div></td>
+<td>39</td>
+<td>Runner.Test_Runner@5b03b9fe</td></tr>
+</table><p>
+</body>
+</html>

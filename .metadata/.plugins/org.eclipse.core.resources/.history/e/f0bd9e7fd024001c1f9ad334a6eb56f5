@@ -1,0 +1,61 @@
+package SelBasics;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LaunchingApplication {
+
+	public static void main(String[] args)throws InterruptedException {
+		// TODO Auto-generated method stub
+		/*
+		 * Test Login feature:
+		 * 1. Open Chrome Browser
+		 * 2. Launch the appplication
+		 * 3. Enter username
+		 * 4. Enter password
+		 * 5. CLick on LogIn
+		 * 6. Close browser
+		 */
+		
+		
+		/*WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.ebay.com/");
+		driver.findElement(By.xpath("//*[@id=\"gh-ug-flex\"]/a")).click();
+		driver.findElement(By.id("firstname")).sendKeys("Hhhjhjh");
+		driver.findElement(By.id("lastname")).sendKeys("s");
+		driver.findElement(By.id("Email")).sendKeys("harikaran289@gmail.com");
+		driver.findElement(By.id("password")).sendKeys("hhkdkjah");
+		Thread.sleep(2000);
+		driver.findElement(By.id("EMAIL_REG_FORM_SUBMIT")).click();
+		*/
+		
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.com%2F");
+		driver.findElement(By.id("userid")).sendKeys("harikaran289@gmail.com");
+		driver.findElement(By.id("signin-continue-btn")).click();
+		driver.findElement(By.id("pass")).sendKeys("Itsmehari@23");
+		
+		
+		Thread.sleep(5000);
+		driver.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

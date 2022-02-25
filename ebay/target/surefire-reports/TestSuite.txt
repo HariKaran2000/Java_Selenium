@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 281.519 s <<< FAILURE! - in TestSuite
+myRunner.MyTestRunner.runScenario["To verify user is able to Register for Business account", "Optional[Register Functionality]"](6)  Time elapsed: 40.99 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <button name="BUSINESS_REG_FORM_SUBMIT" id="BUSINESS_REG_FORM_SUBMIT" class="btn btn--primary btn--large btn--fluid" disabled="" type="submit" aria-describedby="legalTextId" data-click-tracking-data="{&quot;linkId&quot;:&quot;47252&quot;,&quot;pageId&quot;:&quot;3319671&quot;,&quot;type&quot;:&quot;_plsr&quot;,&quot;payload&quot;:{&quot;RegModuleName&quot;:&quot;PARTIAL_REG_BUSINESS&quot;}}">...</button> is not clickable at point (508, 551). Other element would receive the click: <iframe id="captchaFrame" src="/captcharouter_challenge?ap=1&amp;iim=uNDkuMjL&amp;iia=RXA0LjEzmG&amp;iiz=JjbNi4xOTM*FXX&amp;ru=https%3A%2F%2Fsignup.ebay.com%2Fajax%2Fvalidatefield&amp;iid=c2853a46-664a-40ce-90da-d406462ea3cd" style="position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; border: 0px; background-color: white; z-index: 99999;"></iframe>
+  (Session info: chrome=94.0.4606.81)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-N4DS0TK', ip: '192.168.42.87', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\HARIKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61514}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 781cc77090776f094950dd0d52059a52
+

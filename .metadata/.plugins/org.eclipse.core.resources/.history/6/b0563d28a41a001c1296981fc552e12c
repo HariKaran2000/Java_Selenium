@@ -1,0 +1,19 @@
+package ArrayList;
+
+public class problem {
+
+	public static void main(String args[])
+	{
+	System.out.print(print("Hello", 5));
+	}
+	static void print(String a, int n)
+	{
+	for(int i=1; i<=n; i++)
+	{
+	System.out.print(a);
+	}
+	}
+	}
+	
+
+

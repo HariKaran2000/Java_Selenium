@@ -1,0 +1,19 @@
+package practice;
+
+//import java.util.ArrayList;
+
+public class students {
+	int sturoll;
+	String sname;
+	
+	
+	
+	
+	
+		
+		
+		
+	
+
+}
+

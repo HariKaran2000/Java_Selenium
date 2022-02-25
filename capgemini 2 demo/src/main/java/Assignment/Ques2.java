@@ -1,0 +1,53 @@
+package Assignment;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+public class Ques2 {
+
+	public static void main(String[] args)throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+
+        
+        driver.get("https://www.ebay.com/");
+        String pw = driver.getWindowHandle();
+        driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[3]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"mainContent\"]/section[1]/div[2]/a[2]/div[1]/img")).click();
+        driver.findElement(By.xpath("//*[@id=\"s0-27-9-0-1[0]-0-1[0]-0-18-list\"]/li[1]/a/div/img")).click();
+        driver.findElement(By.xpath("//*[@id=\"s0-27_2-9-0-1[0]-0-1\"]/ul/li[1]/div/div[1]/div/a/div/div/img")).click();
+        driver.findElement(By.xpath("//*[@id=\"isCartBtn_btn\"]")).click();
+        driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div/div[4]/div/div[1]/button")).click();
+        Thread.sleep(9000);
+        driver.findElement(By.id("gxo-btn")).click();
+	        Set<String> mws = driver.getWindowHandles();
+	        Iterator<String> imws = mws.iterator();
+	        System.out.println(" The number of windows :: "+ mws.size());             
+	        while(imws.hasNext())
+	            {
+	                  System.out.println("window");
+	                String cw = imws.next();
+	                if(!cw.equals(pw))
+	                {
+	                    driver = driver.switchTo().window(cw);
+	                    driver.findElement(By.id("gxo-btn")).click();
+	                    break;
+	                }
+	            }        
+
+	        Thread.sleep(20000);
+	        driver.findElement(By.id("firstName")).sendKeys("Harikaran");
+	        driver.quit();    
+		
+		
+			
+
+	}
+
+}

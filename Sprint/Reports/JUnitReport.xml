@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.421">
+    <testcase classname="Search Functionality" name="To verify the user is able to search for an item in the application" time="0.178">
+        <system-out><![CDATA[Given : User is in home page................................................passed
+When : User click on the Search edit box....................................passed
+And : User enter the item name in Search edit box...........................passed
+And : User click the Search button..........................................passed
+Then : Products will appears................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>

@@ -1,0 +1,43 @@
+package Assignment;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+public class Ques5 {
+
+	private static WebElement dropDown;
+
+	public static void main(String[] args)throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://sampleapp.tricentis.com/101/app.php");
+		WebElement Dropdown = driver.findElement(By.id("make"));
+		
+		
+		dropDown.findElements(By.tagName("//*[@id=\"make\"]"));
+		System.out.println(driver.findElements(By.xpath("//*[@id=\"make\"]")).size());
+		List<WebElement> options = driver.findElements(By.tagName("//*[@id=\"make\"]"));
+		
+		
+		//for (WebElement webElement : options) {
+			//System.out.println(webElement.getText());
+			//System.out.println(webElement.getAttribute(""));
+		//}
+		
+		
+		
+		Thread.sleep(2000);
+		driver.quit();		
+
+	}
+
+}
+

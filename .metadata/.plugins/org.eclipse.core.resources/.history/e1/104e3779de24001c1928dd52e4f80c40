@@ -1,0 +1,25 @@
+package SelBasics;
+
+		
+		/*WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://signin.ebay.com/ws/eBayISAPI.dll?SignIn&ru=https%3A%2F%2Fwww.ebay.com%2F");
+		driver.findElement(By.id("userid")).sendKeys("harikaran");
+		driver.findElement(By.id("signin-continue-btn")).click();
+		driver.findElement(By.id("pass")).sendKeys("harikaran");
+		*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	

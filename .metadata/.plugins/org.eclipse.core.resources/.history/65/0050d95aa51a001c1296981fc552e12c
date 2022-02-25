@@ -1,0 +1,25 @@
+package ArrayList;
+
+public class problem {
+
+	public static void main(String args[])
+	{
+	System.out.print(print("Hi", 5));
+	}
+	static String print(String a, int n)
+	{
+	for(int i=1; i<n; i++)
+	{
+	System.out.print(a);
+	}
+	
+	return a;
+	
+	}
+	
+		
+		}
+
+	
+
+

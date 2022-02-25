@@ -1,0 +1,11 @@
+package assignment;
+
+public class Rectangle {
+	public void rectangleMethod() {
+		System.out.println("This is rectangle Shape");
+
+}
+	public class square extends Rectangle{
+		
+	}
+}

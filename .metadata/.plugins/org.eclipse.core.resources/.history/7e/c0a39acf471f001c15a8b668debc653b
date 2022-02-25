@@ -1,0 +1,31 @@
+package Assignment;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+
+public class Ques5 {
+
+	private static WebElement dropDown;
+
+	public static void main(String[] args)throws InterruptedException {
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://sampleapp.tricentis.com/101/#");
+		driver.findElement(By.id("nav_automobile")).click();
+		Select select = new Select(dropDown);
+		
+		select.selectByVisibleText("make");
+		
+		Thread.sleep(7000);
+		driver.quit();		
+
+	}
+
+}
+

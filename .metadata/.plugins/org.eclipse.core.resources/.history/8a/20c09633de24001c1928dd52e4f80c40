@@ -1,0 +1,52 @@
+package SelBasics;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+ 
+
+public class LaunchingApplication
+{
+    public static void main(String[] args)
+    {
+    	WebDriverManager.chromedriver().setup();
+
+ 
+
+        ChromeOptions options = new ChromeOptions();
+
+ 
+
+        options.addArguments("start-maximized");
+
+ 
+
+        options.addArguments("disable-infobars");
+        
+        options.addArguments("--disable-extensions");
+        
+        WebDriver driver = new ChromeDriver(options);
+        
+        driver.get("https://www.ebay.com/");
+        driver.findElement(By.xpath("//a[contains(text(),'Sign in')]")).click();
+        driver.findElement(By.xpath("//input[contains(@id,'userid')]")).sendKeys("abcgd@gmail.com");
+        driver.findElement(By.xpath("//button[contains(@id,'signin-continue-btn')]")).click();
+        driver.findElement(By.xpath("//input[contains(@id,'pass')]")).sendKeys("abcgd@gmail.com");
+        driver.findElement(By.xpath("///button[contains(@id,'sgnBt')]")).click();
+      
+       // driver.findElement(By.id("gh-ac")).sendKeys("laptop");
+        
+        new WebDriverWait(driver, 50).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[starts-with(@name, 'a-') and starts-with(@src, 'https://www.google.com/recaptcha')]") ));
+        
+        new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.recaptcha-checkbox-checkmark"))).click();
+    }
+}
+ 
+
+
+    

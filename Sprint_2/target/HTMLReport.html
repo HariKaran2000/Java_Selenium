@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.11.0"},"runtime":{"name":"OpenJDK 64-Bit Server VM","version":"16.0.2+7-67"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1634634066","nanos":575498500}}},{"source":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Register.feature","data":"Feature: Register Functionality\r\nScenario Outline: To verify user is able to Register For Personal account\r\nGiven  User is in the home page\r\nWhen  User clicks on the register\r\nAnd  User enter the account details \u003cfname\u003e and \u003clname\u003e and \u003cmail\u003e and \u003cpass\u003e\r\nAnd  User clicks on the Register button\r\nThen  Account is Registered\r\nExamples:\r\n\t|fname|lname|mail|pass|\r\n\t|zackson|jack|zacksonmade23@gmail.com|jacHHe@!3366|\r\n\t|justice|penakat|znyderkat@gmail.com|treatRR@3388|\r\n\r\n\r\n\t\r\nScenario: To verify user is able to Register for Business account\r\nGiven  User is in the home page\r\nWhen  User clicks on the register\r\nAnd  User enter the Business account details\r\nAnd  click on Register button\r\nThen  Business account is Registered\r\n\t","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Register.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Register Functionality","children":[{"scenario":{"location":{"line":2,"column":1},"keyword":"Scenario Outline","name":"To verify user is able to Register For Personal account","steps":[{"location":{"line":3,"column":1},"keyword":"Given ","text":"User is in the home page","id":"55f88392-e057-411c-abb8-4e13c3d20df7"},{"location":{"line":4,"column":1},"keyword":"When ","text":"User clicks on the register","id":"06872776-189a-41e9-8b1f-d78da5bc5d26"},{"location":{"line":5,"column":1},"keyword":"And ","text":"User enter the account details \u003cfname\u003e and \u003clname\u003e and \u003cmail\u003e and \u003cpass\u003e","id":"974d3536-fdfd-433f-b244-8ba1f73d2d26"},{"location":{"line":6,"column":1},"keyword":"And ","text":"User clicks on the Register button","id":"f1a413a8-cf4c-4d77-a5f7-da2299e31306"},{"location":{"line":7,"column":1},"keyword":"Then ","text":"Account is Registered","id":"bc03e43f-a2f9-4f37-ba34-3ace9f82c3bc"}],"examples":[{"location":{"line":8,"column":1},"keyword":"Examples","tableHeader":{"location":{"line":9,"column":2},"cells":[{"location":{"line":9,"column":3},"value":"fname"},{"location":{"line":9,"column":9},"value":"lname"},{"location":{"line":9,"column":15},"value":"mail"},{"location":{"line":9,"column":20},"value":"pass"}],"id":"61bde154-98fa-4f62-b052-fa45d590434e"},"tableBody":[{"location":{"line":10,"column":2},"cells":[{"location":{"line":10,"column":3},"value":"zackson"},{"location":{"line":10,"column":11},"value":"jack"},{"location":{"line":10,"column":16},"value":"zacksonmade23@gmail.com"},{"location":{"line":10,"column":40},"value":"jacHHe@!3366"}],"id":"6454b393-ab28-4b06-91d4-4cd61504e243"},{"location":{"line":11,"column":2},"cells":[{"location":{"line":11,"column":3},"value":"justice"},{"location":{"line":11,"column":11},"value":"penakat"},{"location":{"line":11,"column":19},"value":"znyderkat@gmail.com"},{"location":{"line":11,"column":39},"value":"treatRR@3388"}],"id":"64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"}],"id":"18c0c18c-546b-48b7-9be5-8d4232896274"}],"id":"78eb24e1-68e6-4136-8591-f69b47af1cca"}},{"scenario":{"location":{"line":15,"column":1},"keyword":"Scenario","name":"To verify user is able to Register for Business account","steps":[{"location":{"line":16,"column":1},"keyword":"Given ","text":"User is in the home page","id":"a765db7a-4c74-46a9-8223-6aaf384ed353"},{"location":{"line":17,"column":1},"keyword":"When ","text":"User clicks on the register","id":"2b7c2968-dbe4-49be-a279-a9317c232b59"},{"location":{"line":18,"column":1},"keyword":"And ","text":"User enter the Business account details","id":"a5b84d58-4eba-4d55-ab62-3819925815ac"},{"location":{"line":19,"column":1},"keyword":"And ","text":"click on Register button","id":"b1d62d35-3939-4947-a281-222cacd53848"},{"location":{"line":20,"column":1},"keyword":"Then ","text":"Business account is Registered","id":"14d2fc56-0f65-4448-85da-9cf6d1b1d0a4"}],"id":"76d16e32-e46f-4e6a-90b0-abc1bca35f9f"}}]}}},{"pickle":{"id":"ab39cbd1-4373-4143-9d2f-25d6b298afda","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Register.feature","name":"To verify user is able to Register For Personal account","language":"en","steps":[{"text":"User is in the home page","id":"6cebd6ff-7947-41e8-9a42-a84c320f5e5b","astNodeIds":["55f88392-e057-411c-abb8-4e13c3d20df7","6454b393-ab28-4b06-91d4-4cd61504e243"]},{"text":"User clicks on the register","id":"6afa5075-c4ec-4849-ae07-06d0038b3fdd","astNodeIds":["06872776-189a-41e9-8b1f-d78da5bc5d26","6454b393-ab28-4b06-91d4-4cd61504e243"]},{"text":"User enter the account details zackson and jack and zacksonmade23@gmail.com and jacHHe@!3366","id":"affa0632-66c1-46f8-93c4-63d4c3087f30","astNodeIds":["974d3536-fdfd-433f-b244-8ba1f73d2d26","6454b393-ab28-4b06-91d4-4cd61504e243"]},{"text":"User clicks on the Register button","id":"f00ba90a-ba68-4b7f-82ed-91d438cdd05b","astNodeIds":["f1a413a8-cf4c-4d77-a5f7-da2299e31306","6454b393-ab28-4b06-91d4-4cd61504e243"]},{"text":"Account is Registered","id":"c5b5985a-98bb-4e4a-bc56-94967cfa348f","astNodeIds":["bc03e43f-a2f9-4f37-ba34-3ace9f82c3bc","6454b393-ab28-4b06-91d4-4cd61504e243"]}],"astNodeIds":["78eb24e1-68e6-4136-8591-f69b47af1cca","6454b393-ab28-4b06-91d4-4cd61504e243"]}},{"pickle":{"id":"fc3021f0-8e1e-44f9-84a8-f8e361c497b9","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Register.feature","name":"To verify user is able to Register For Personal account","language":"en","steps":[{"text":"User is in the home page","id":"d093d3b4-49b9-4ce3-908d-6fd69cee5423","astNodeIds":["55f88392-e057-411c-abb8-4e13c3d20df7","64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"]},{"text":"User clicks on the register","id":"d77c917c-a2ee-416c-8a8c-f6819b093363","astNodeIds":["06872776-189a-41e9-8b1f-d78da5bc5d26","64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"]},{"text":"User enter the account details justice and penakat and znyderkat@gmail.com and treatRR@3388","id":"4a26c048-1a50-4d46-8353-3024047b7dea","astNodeIds":["974d3536-fdfd-433f-b244-8ba1f73d2d26","64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"]},{"text":"User clicks on the Register button","id":"a3c33d7b-6b5e-4d3e-a2fe-368c78cc9ee3","astNodeIds":["f1a413a8-cf4c-4d77-a5f7-da2299e31306","64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"]},{"text":"Account is Registered","id":"9b3a436a-152a-423d-9753-3a95cd586a95","astNodeIds":["bc03e43f-a2f9-4f37-ba34-3ace9f82c3bc","64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"]}],"astNodeIds":["78eb24e1-68e6-4136-8591-f69b47af1cca","64e0d36b-8e98-4793-a8f3-4dbf8f28e2c9"]}},{"pickle":{"id":"1f157e9e-7bab-4194-a698-5b6763853888","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Register.feature","name":"To verify user is able to Register for Business account","language":"en","steps":[{"text":"User is in the home page","id":"46b9c9fe-a24e-47f3-bf45-82583b1b3eb5","astNodeIds":["a765db7a-4c74-46a9-8223-6aaf384ed353"]},{"text":"User clicks on the register","id":"33045b84-78b1-419d-ab7c-123dd995e03d","astNodeIds":["2b7c2968-dbe4-49be-a279-a9317c232b59"]},{"text":"User enter the Business account details","id":"a1fb6e68-73cc-4337-9c34-843bd9ff530e","astNodeIds":["a5b84d58-4eba-4d55-ab62-3819925815ac"]},{"text":"click on Register button","id":"fec67075-f06d-466f-8209-8df56491037e","astNodeIds":["b1d62d35-3939-4947-a281-222cacd53848"]},{"text":"Business account is Registered","id":"8b25b1e4-ce45-4e71-8709-dae7a9fce4a4","astNodeIds":["14d2fc56-0f65-4448-85da-9cf6d1b1d0a4"]}],"astNodeIds":["76d16e32-e46f-4e6a-90b0-abc1bca35f9f"]}},{"source":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","data":"Feature: Search Functionality\r\nScenario: To verify the user is able to search for an item in the application\r\nGiven  User in home page\r\nWhen  User click on the Search edit box\r\nAnd  User enter the item name in Search edit box\r\nAnd  User click the Search button\r\nThen  Products will appear\r\n\r\n\r\nScenario: To verify the user is able to search for an unrelated item in the application\r\nGiven User in home page\r\nWhen User click on the Search edit box\r\nAnd User enter the unrelated item name in Search edit box\r\nAnd User click the Search button\r\nThen User got the message like error\r\n\r\n\r\n\r\nScenario: To verify the user is able to view the daily deals\r\nGiven User in home page\r\nWhen User click on the  link Daily Deals\r\nThen User reaches the daily deals page\r\n\r\n\r\n\r\n\r\nScenario: To verify the user is able to select the different categories\r\nGiven User in home page\r\nWhen User click on the link Shop by category\r\nAnd Select the different categories\r\nThen Display the selected the product\r\n\r\n\r\nScenario: To verify the user is able to filter the products\r\nGiven User in home page\r\nWhen User is in product page\r\nAnd User click on the More filters\r\nAnd Select the different Specifications\r\nAnd Click on the Apply\r\nThen Displayed the Product with given Specificatons\r\n\r\n\r\n\r\n\r\n\r\n\r\nScenario: To verify that user is able to Add items to the cart\r\nGiven User in home page\r\nWhen User click on the Search edit box\r\nAnd Enter the product name in Search edit box\r\nAnd  Click on the Add to cart button\r\nThen Product will  be Add to cart","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Search Functionality","children":[{"scenario":{"location":{"line":2,"column":1},"keyword":"Scenario","name":"To verify the user is able to search for an item in the application","steps":[{"location":{"line":3,"column":1},"keyword":"Given ","text":"User in home page","id":"c92d6c50-e533-4584-aa5f-96fd77babab6"},{"location":{"line":4,"column":1},"keyword":"When ","text":"User click on the Search edit box","id":"0359c4ac-3bdb-4e67-b452-4ca6bf1b71b0"},{"location":{"line":5,"column":1},"keyword":"And ","text":"User enter the item name in Search edit box","id":"77e236e7-1dec-4bec-abb9-9ff93a48e4bf"},{"location":{"line":6,"column":1},"keyword":"And ","text":"User click the Search button","id":"5b2416d9-1a45-4418-90fb-717498bb8c28"},{"location":{"line":7,"column":1},"keyword":"Then ","text":"Products will appear","id":"5e4350cb-4414-42ca-9db3-8463f138113f"}],"id":"07cf7a4a-f3ef-4ef9-86f9-f53aa7b4503f"}},{"scenario":{"location":{"line":10,"column":1},"keyword":"Scenario","name":"To verify the user is able to search for an unrelated item in the application","steps":[{"location":{"line":11,"column":1},"keyword":"Given ","text":"User in home page","id":"4c1bb44c-7c97-4df0-97b2-340f9e2f46ce"},{"location":{"line":12,"column":1},"keyword":"When ","text":"User click on the Search edit box","id":"972c1127-5d1a-43dc-be24-1be0082b1d30"},{"location":{"line":13,"column":1},"keyword":"And ","text":"User enter the unrelated item name in Search edit box","id":"ae426287-48e5-48e2-8d2e-b670a833c928"},{"location":{"line":14,"column":1},"keyword":"And ","text":"User click the Search button","id":"5a46f1e2-38d8-4f9b-9288-ef25110f29c0"},{"location":{"line":15,"column":1},"keyword":"Then ","text":"User got the message like error","id":"541c79ce-a210-466d-adb8-f570639c4ae1"}],"id":"98f15f8f-0e4a-4179-a087-a70f4253caa6"}},{"scenario":{"location":{"line":19,"column":1},"keyword":"Scenario","name":"To verify the user is able to view the daily deals","steps":[{"location":{"line":20,"column":1},"keyword":"Given ","text":"User in home page","id":"7bf4b2a4-842f-4c78-a1bf-7776f9f290fa"},{"location":{"line":21,"column":1},"keyword":"When ","text":"User click on the  link Daily Deals","id":"d2b5bb48-edfd-4ee6-b6fa-c0463ff3ce40"},{"location":{"line":22,"column":1},"keyword":"Then ","text":"User reaches the daily deals page","id":"a0e9a2a9-fddf-4032-9ec8-87a7f66ccdd1"}],"id":"32632cc1-656c-4131-8317-063cf1d80002"}},{"scenario":{"location":{"line":27,"column":1},"keyword":"Scenario","name":"To verify the user is able to select the different categories","steps":[{"location":{"line":28,"column":1},"keyword":"Given ","text":"User in home page","id":"ec82d35a-97d9-4217-ba30-f5c22b79fdd0"},{"location":{"line":29,"column":1},"keyword":"When ","text":"User click on the link Shop by category","id":"a8f0e97e-594d-4567-a611-2263bf1b38f4"},{"location":{"line":30,"column":1},"keyword":"And ","text":"Select the different categories","id":"4aec3f96-3d9a-4a43-a56c-51da3a9745b8"},{"location":{"line":31,"column":1},"keyword":"Then ","text":"Display the selected the product","id":"aa60ed75-7d89-46d9-a5ea-44015177a488"}],"id":"41698342-e5d4-418c-9281-85d1a06f4fa0"}},{"scenario":{"location":{"line":34,"column":1},"keyword":"Scenario","name":"To verify the user is able to filter the products","steps":[{"location":{"line":35,"column":1},"keyword":"Given ","text":"User in home page","id":"615de0a7-cd41-47a0-a112-e35a535b5693"},{"location":{"line":36,"column":1},"keyword":"When ","text":"User is in product page","id":"f92a85dc-4a3b-417a-be91-8851fcecd010"},{"location":{"line":37,"column":1},"keyword":"And ","text":"User click on the More filters","id":"35400c72-ae8c-4674-a952-ab571466fe79"},{"location":{"line":38,"column":1},"keyword":"And ","text":"Select the different Specifications","id":"eeac7fa5-c3dd-435d-b6c8-6fe88e9adee7"},{"location":{"line":39,"column":1},"keyword":"And ","text":"Click on the Apply","id":"6b84b8c5-9b8c-4793-a2cd-441715a5f018"},{"location":{"line":40,"column":1},"keyword":"Then ","text":"Displayed the Product with given Specificatons","id":"c58d23bc-ec6a-434d-87a0-8a8d26035744"}],"id":"3d375de4-4e88-4469-b1a3-f581463e7754"}},{"scenario":{"location":{"line":47,"column":1},"keyword":"Scenario","name":"To verify that user is able to Add items to the cart","steps":[{"location":{"line":48,"column":1},"keyword":"Given ","text":"User in home page","id":"e357d2cc-b009-4c9c-9d82-a571c5783a1c"},{"location":{"line":49,"column":1},"keyword":"When ","text":"User click on the Search edit box","id":"c6faea54-0ce1-4b70-a889-7e70a45009db"},{"location":{"line":50,"column":1},"keyword":"And ","text":"Enter the product name in Search edit box","id":"f5f770a5-04d1-4c94-8b97-767c6df5b01c"},{"location":{"line":51,"column":1},"keyword":"And ","text":"Click on the Add to cart button","id":"37804188-010e-42d6-a4f6-5147a4381ded"},{"location":{"line":52,"column":1},"keyword":"Then ","text":"Product will  be Add to cart","id":"ac1b2379-c210-4625-921a-87641ad43995"}],"id":"aae66b88-61d7-44ed-9737-cd527d7a2c5d"}}]}}},{"pickle":{"id":"66639a6a-2d5d-474f-a01b-8ec38c9197bd","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","name":"To verify the user is able to search for an item in the application","language":"en","steps":[{"text":"User in home page","id":"28097655-2b31-4916-a72b-3e4ff51d6d4c","astNodeIds":["c92d6c50-e533-4584-aa5f-96fd77babab6"]},{"text":"User click on the Search edit box","id":"fefd9531-d971-4135-b8e0-41340849e870","astNodeIds":["0359c4ac-3bdb-4e67-b452-4ca6bf1b71b0"]},{"text":"User enter the item name in Search edit box","id":"da574a8a-82e7-435b-a19f-fe3f998aa9d6","astNodeIds":["77e236e7-1dec-4bec-abb9-9ff93a48e4bf"]},{"text":"User click the Search button","id":"05c23c49-a97d-482f-bbec-518e2e3ec5cd","astNodeIds":["5b2416d9-1a45-4418-90fb-717498bb8c28"]},{"text":"Products will appear","id":"06575c8e-f5c8-4691-acb5-a2edcf0bb734","astNodeIds":["5e4350cb-4414-42ca-9db3-8463f138113f"]}],"astNodeIds":["07cf7a4a-f3ef-4ef9-86f9-f53aa7b4503f"]}},{"pickle":{"id":"b03b04fe-9779-48f4-bff8-e27c4b26d3e3","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","name":"To verify the user is able to search for an unrelated item in the application","language":"en","steps":[{"text":"User in home page","id":"9662e499-b9c9-4ead-a0d9-fbe2a86ac108","astNodeIds":["4c1bb44c-7c97-4df0-97b2-340f9e2f46ce"]},{"text":"User click on the Search edit box","id":"e15e5b97-2330-4b80-8984-7054f0e3678a","astNodeIds":["972c1127-5d1a-43dc-be24-1be0082b1d30"]},{"text":"User enter the unrelated item name in Search edit box","id":"456cf451-1a79-4b02-980e-3187c8fc8197","astNodeIds":["ae426287-48e5-48e2-8d2e-b670a833c928"]},{"text":"User click the Search button","id":"223da513-5822-4fc1-b4cd-4e5b241af361","astNodeIds":["5a46f1e2-38d8-4f9b-9288-ef25110f29c0"]},{"text":"User got the message like error","id":"8ddb0562-78e1-4b96-9d24-897ae3dd562b","astNodeIds":["541c79ce-a210-466d-adb8-f570639c4ae1"]}],"astNodeIds":["98f15f8f-0e4a-4179-a087-a70f4253caa6"]}},{"pickle":{"id":"f72197b1-941a-40aa-b50c-ba5afe3068b1","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","name":"To verify the user is able to view the daily deals","language":"en","steps":[{"text":"User in home page","id":"9c857504-8a29-4084-9f0e-0591eaf85c6d","astNodeIds":["7bf4b2a4-842f-4c78-a1bf-7776f9f290fa"]},{"text":"User click on the  link Daily Deals","id":"5c828e94-a40c-43ee-93ec-4aca571c6b58","astNodeIds":["d2b5bb48-edfd-4ee6-b6fa-c0463ff3ce40"]},{"text":"User reaches the daily deals page","id":"538bd756-07ea-46ce-8fd2-81db3aba7993","astNodeIds":["a0e9a2a9-fddf-4032-9ec8-87a7f66ccdd1"]}],"astNodeIds":["32632cc1-656c-4131-8317-063cf1d80002"]}},{"pickle":{"id":"18e18aad-a814-4d32-b6a6-cd1b58af4bce","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","name":"To verify the user is able to select the different categories","language":"en","steps":[{"text":"User in home page","id":"ae831214-308a-4ac5-95fc-9e8e44997973","astNodeIds":["ec82d35a-97d9-4217-ba30-f5c22b79fdd0"]},{"text":"User click on the link Shop by category","id":"93721860-cc9c-4b0b-809f-e903d244ef5c","astNodeIds":["a8f0e97e-594d-4567-a611-2263bf1b38f4"]},{"text":"Select the different categories","id":"2e1d838f-b26d-4f54-a855-fd2c60ff20bb","astNodeIds":["4aec3f96-3d9a-4a43-a56c-51da3a9745b8"]},{"text":"Display the selected the product","id":"aaeee076-2166-44eb-a944-18d1209e9d40","astNodeIds":["aa60ed75-7d89-46d9-a5ea-44015177a488"]}],"astNodeIds":["41698342-e5d4-418c-9281-85d1a06f4fa0"]}},{"pickle":{"id":"f3e01d0e-295d-4955-8e85-6c67043d6d29","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","name":"To verify the user is able to filter the products","language":"en","steps":[{"text":"User in home page","id":"c2d646e0-cf3d-4fb9-8b46-a67e1e84aa6f","astNodeIds":["615de0a7-cd41-47a0-a112-e35a535b5693"]},{"text":"User is in product page","id":"c027742d-d20d-476d-9343-7683bf243c17","astNodeIds":["f92a85dc-4a3b-417a-be91-8851fcecd010"]},{"text":"User click on the More filters","id":"167ee7f4-f96d-4ecd-b835-c93763c50960","astNodeIds":["35400c72-ae8c-4674-a952-ab571466fe79"]},{"text":"Select the different Specifications","id":"cb19c81d-a7d6-43c1-9c31-d6fdfc943c9c","astNodeIds":["eeac7fa5-c3dd-435d-b6c8-6fe88e9adee7"]},{"text":"Click on the Apply","id":"4e5c8b0e-cb63-45a2-9772-4147b047a85c","astNodeIds":["6b84b8c5-9b8c-4793-a2cd-441715a5f018"]},{"text":"Displayed the Product with given Specificatons","id":"e802bcd1-411b-442c-97a1-f385239ab4cb","astNodeIds":["c58d23bc-ec6a-434d-87a0-8a8d26035744"]}],"astNodeIds":["3d375de4-4e88-4469-b1a3-f581463e7754"]}},{"pickle":{"id":"26f8c158-771a-4aa9-87d3-b0b24bc1da5f","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/SearchPage.feature","name":"To verify that user is able to Add items to the cart","language":"en","steps":[{"text":"User in home page","id":"bc90d0a8-c9a2-47d4-96db-b1a5a1be3574","astNodeIds":["e357d2cc-b009-4c9c-9d82-a571c5783a1c"]},{"text":"User click on the Search edit box","id":"cdaa1691-f65e-4767-a33c-d04fddcd792b","astNodeIds":["c6faea54-0ce1-4b70-a889-7e70a45009db"]},{"text":"Enter the product name in Search edit box","id":"2b55ffec-9438-4bcd-8866-686dc449cda3","astNodeIds":["f5f770a5-04d1-4c94-8b97-767c6df5b01c"]},{"text":"Click on the Add to cart button","id":"e929024c-4877-4900-a379-5c948f6f55ee","astNodeIds":["37804188-010e-42d6-a4f6-5147a4381ded"]},{"text":"Product will  be Add to cart","id":"beab9d9a-808e-425a-b430-608bca15265e","astNodeIds":["ac1b2379-c210-4625-921a-87641ad43995"]}],"astNodeIds":["aae66b88-61d7-44ed-9737-cd527d7a2c5d"]}},{"source":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","data":"Feature: Sign in functionality\r\nScenario: To verify that the user redirects to the sign up page\r\nGiven User is in home page\r\nWhen User click on the Sign in\r\nThen Application navigates to Sign in page\r\n\r\n\r\n\r\n\r\nScenario: To verify that user able to login\r\nGiven User is in the Sign up page\r\nWhen User entering details\r\nThen User reaches the home page\r\n\r\n\r\n#Scenario: To verify that the user enters the valid gmail or facebook or Apple accounts\r\n#Given User is in home page\r\n#When User click on the Sign in\r\n#And User click on Continue with Facebook\r\n#And User enters Facebook username or email\r\n#And User Enter Facebook password\r\n#And User click on Log In\r\n#Then Signed up succesfully by Facebook account\r\n\r\nScenario: To verify that the user enters the valid gmail or facebook or Apple accounts\r\nGiven User is in home page\r\nWhen User click on the Sign in\r\nAnd User click on Continue with Apple\r\nAnd User enters Apple userId\r\nAnd User enters Apple password\r\nAnd User click on sign in arrow\r\nThen Signed up succesfully by Apple account \r\n\r\nScenario: To verify that the user able to switch accounts\r\nGiven User is in home page\r\nWhen User click on the Sign in\r\nAnd User mistakely enters wrong Email or username\r\nAnd User click on Continue\r\nAnd User click on Switch account link\r\nAnd User enter correct  Email or username\r\nThen user account is changed\r\n\r\nScenario: To verify the user is able to get OTP on register email and phone number\r\nGiven User is in home page\r\nWhen User click on the Sign in\r\nAnd User enters the Email or username\r\nAnd User click on Continue\r\nAnd User clicks on Need help signing in?\r\nAnd in Email Click on Receive email\r\nAnd Enter OTP received on registered email\r\nAnd Ater entering opt recieved in email and click Continue\r\nThen User reached the home page\r\n\r\n\r\n#Scenario: To verify the user is able to get OTP on register email and phone number\r\n#Given User is in home page\r\n#When User click on the Sign in\r\n#And User enters the Email or username\r\n#And User click on Continue\r\n#And User clicks on Need help signing in?\r\n#And in Text Click on Receive text\r\n#And Enter OTP received on registered Phone number\r\n#And Ater entering opt recieved in phone number and click Continue\r\n#Then User reached the home page","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Sign in functionality","children":[{"scenario":{"location":{"line":2,"column":1},"keyword":"Scenario","name":"To verify that the user redirects to the sign up page","steps":[{"location":{"line":3,"column":1},"keyword":"Given ","text":"User is in home page","id":"4aa7bee7-4465-4a54-803d-fc3fa2de880e"},{"location":{"line":4,"column":1},"keyword":"When ","text":"User click on the Sign in","id":"d3d609a0-f7de-4ddd-a69d-377a43bc2012"},{"location":{"line":5,"column":1},"keyword":"Then ","text":"Application navigates to Sign in page","id":"afbc2267-00bb-4bba-b796-14eae780352a"}],"id":"e203f68d-1ef0-4e95-ab20-139353f2eab7"}},{"scenario":{"location":{"line":10,"column":1},"keyword":"Scenario","name":"To verify that user able to login","steps":[{"location":{"line":11,"column":1},"keyword":"Given ","text":"User is in the Sign up page","id":"98abb45c-730b-41a4-8b8e-d82396aab8b7"},{"location":{"line":12,"column":1},"keyword":"When ","text":"User entering details","id":"09f97b38-47d1-4e2b-83c7-5c02415e61f1"},{"location":{"line":13,"column":1},"keyword":"Then ","text":"User reaches the home page","id":"ba46eca9-261c-4848-81e4-9631b820fd1b"}],"id":"ce8620e9-172e-4a98-90e8-67183c719dcf"}},{"scenario":{"location":{"line":25,"column":1},"keyword":"Scenario","name":"To verify that the user enters the valid gmail or facebook or Apple accounts","steps":[{"location":{"line":26,"column":1},"keyword":"Given ","text":"User is in home page","id":"94abcdcc-4427-4052-b348-062a2dd6b77f"},{"location":{"line":27,"column":1},"keyword":"When ","text":"User click on the Sign in","id":"1fb4fc19-eac0-409e-a68d-7b3542f5efb0"},{"location":{"line":28,"column":1},"keyword":"And ","text":"User click on Continue with Apple","id":"4ab32796-31b0-40c6-ad9f-3297f7262b53"},{"location":{"line":29,"column":1},"keyword":"And ","text":"User enters Apple userId","id":"a8ceae61-123e-44db-b7d5-435e03713ecc"},{"location":{"line":30,"column":1},"keyword":"And ","text":"User enters Apple password","id":"ac080be9-5beb-4486-ab88-a2cb4b81cbaf"},{"location":{"line":31,"column":1},"keyword":"And ","text":"User click on sign in arrow","id":"897a7bdb-7f2f-4d27-bde6-6897be4ca72c"},{"location":{"line":32,"column":1},"keyword":"Then ","text":"Signed up succesfully by Apple account","id":"b99430b0-83a3-44fb-8dc6-ea396058b77b"}],"id":"e22ce7dd-50db-473a-831a-c6713acfdab1"}},{"scenario":{"location":{"line":34,"column":1},"keyword":"Scenario","name":"To verify that the user able to switch accounts","steps":[{"location":{"line":35,"column":1},"keyword":"Given ","text":"User is in home page","id":"d0a8f610-665c-4258-a239-e5625ac61d47"},{"location":{"line":36,"column":1},"keyword":"When ","text":"User click on the Sign in","id":"7bb77031-7aad-489f-aca2-5863b18fdf0a"},{"location":{"line":37,"column":1},"keyword":"And ","text":"User mistakely enters wrong Email or username","id":"c748e53e-b5c0-4157-9a05-18c7dfb1b912"},{"location":{"line":38,"column":1},"keyword":"And ","text":"User click on Continue","id":"92e4f039-ff7c-4e91-b24f-f6a9203c607f"},{"location":{"line":39,"column":1},"keyword":"And ","text":"User click on Switch account link","id":"4cac7b3f-3c82-4534-94b3-81de20462c39"},{"location":{"line":40,"column":1},"keyword":"And ","text":"User enter correct  Email or username","id":"ba8b4b9f-fa7f-40fe-b61b-e24ac5f073db"},{"location":{"line":41,"column":1},"keyword":"Then ","text":"user account is changed","id":"9a404c8f-d452-4370-8892-c0bc2800962f"}],"id":"b2bd6c0e-3f4c-4b0d-a698-34ca13a12566"}},{"scenario":{"location":{"line":43,"column":1},"keyword":"Scenario","name":"To verify the user is able to get OTP on register email and phone number","steps":[{"location":{"line":44,"column":1},"keyword":"Given ","text":"User is in home page","id":"d3d88cd0-548c-4d15-80af-982dde121ecb"},{"location":{"line":45,"column":1},"keyword":"When ","text":"User click on the Sign in","id":"9516b679-ccb5-401b-94db-4aff7d4666af"},{"location":{"line":46,"column":1},"keyword":"And ","text":"User enters the Email or username","id":"038d2555-fe72-4794-9cef-223b7c0ffde8"},{"location":{"line":47,"column":1},"keyword":"And ","text":"User click on Continue","id":"68148fb4-2e5b-4846-b2c4-9213947be097"},{"location":{"line":48,"column":1},"keyword":"And ","text":"User clicks on Need help signing in?","id":"1dca65b8-e108-422d-90bb-51d6d2d972be"},{"location":{"line":49,"column":1},"keyword":"And ","text":"in Email Click on Receive email","id":"a8ae2b2f-9783-43f8-a0f0-140a12566d1f"},{"location":{"line":50,"column":1},"keyword":"And ","text":"Enter OTP received on registered email","id":"34935f21-37dc-4195-a595-aa851f7d40a7"},{"location":{"line":51,"column":1},"keyword":"And ","text":"Ater entering opt recieved in email and click Continue","id":"dd90e37f-53f7-4ab7-ba48-95ddc3fa58a2"},{"location":{"line":52,"column":1},"keyword":"Then ","text":"User reached the home page","id":"0e86de5e-e4c3-4cb8-97bf-b2c6844d4031"}],"id":"da3a1a6a-0e26-4d42-96cb-442c6005352d"}}]},"comments":[{"location":{"line":16,"column":1},"text":"#Scenario: To verify that the user enters the valid gmail or facebook or Apple accounts"},{"location":{"line":17,"column":1},"text":"#Given User is in home page"},{"location":{"line":18,"column":1},"text":"#When User click on the Sign in"},{"location":{"line":19,"column":1},"text":"#And User click on Continue with Facebook"},{"location":{"line":20,"column":1},"text":"#And User enters Facebook username or email"},{"location":{"line":21,"column":1},"text":"#And User Enter Facebook password"},{"location":{"line":22,"column":1},"text":"#And User click on Log In"},{"location":{"line":23,"column":1},"text":"#Then Signed up succesfully by Facebook account"},{"location":{"line":55,"column":1},"text":"#Scenario: To verify the user is able to get OTP on register email and phone number"},{"location":{"line":56,"column":1},"text":"#Given User is in home page"},{"location":{"line":57,"column":1},"text":"#When User click on the Sign in"},{"location":{"line":58,"column":1},"text":"#And User enters the Email or username"},{"location":{"line":59,"column":1},"text":"#And User click on Continue"},{"location":{"line":60,"column":1},"text":"#And User clicks on Need help signing in?"},{"location":{"line":61,"column":1},"text":"#And in Text Click on Receive text"},{"location":{"line":62,"column":1},"text":"#And Enter OTP received on registered Phone number"},{"location":{"line":63,"column":1},"text":"#And Ater entering opt recieved in phone number and click Continue"},{"location":{"line":64,"column":1},"text":"#Then User reached the home page"}]}},{"pickle":{"id":"32e96b8f-20b8-4780-942e-32e848f5315a","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","name":"To verify that the user redirects to the sign up page","language":"en","steps":[{"text":"User is in home page","id":"4fbed9ac-946e-42b1-816d-bbfab9b17935","astNodeIds":["4aa7bee7-4465-4a54-803d-fc3fa2de880e"]},{"text":"User click on the Sign in","id":"1c6da536-09ab-4c56-915c-03ee5f4784d3","astNodeIds":["d3d609a0-f7de-4ddd-a69d-377a43bc2012"]},{"text":"Application navigates to Sign in page","id":"2aab4ecf-c772-4c24-9b1d-07e325c0bd9c","astNodeIds":["afbc2267-00bb-4bba-b796-14eae780352a"]}],"astNodeIds":["e203f68d-1ef0-4e95-ab20-139353f2eab7"]}},{"pickle":{"id":"c0d78309-bfd6-4659-8d0e-4c6d837e276c","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","name":"To verify that user able to login","language":"en","steps":[{"text":"User is in the Sign up page","id":"fc9bbd63-db68-4957-829e-6fedbd739f35","astNodeIds":["98abb45c-730b-41a4-8b8e-d82396aab8b7"]},{"text":"User entering details","id":"6858660c-3e6a-4985-8d2d-c23360c9ef06","astNodeIds":["09f97b38-47d1-4e2b-83c7-5c02415e61f1"]},{"text":"User reaches the home page","id":"50a0a900-5449-40f7-9bbd-45cc5b8c89b3","astNodeIds":["ba46eca9-261c-4848-81e4-9631b820fd1b"]}],"astNodeIds":["ce8620e9-172e-4a98-90e8-67183c719dcf"]}},{"pickle":{"id":"e88634b5-2e48-4bd8-bbd7-472529e3047f","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","name":"To verify that the user enters the valid gmail or facebook or Apple accounts","language":"en","steps":[{"text":"User is in home page","id":"8e403969-c814-4a57-8e76-1760b053bcdc","astNodeIds":["94abcdcc-4427-4052-b348-062a2dd6b77f"]},{"text":"User click on the Sign in","id":"0425405f-4f4b-4803-a831-35cb77bd338c","astNodeIds":["1fb4fc19-eac0-409e-a68d-7b3542f5efb0"]},{"text":"User click on Continue with Apple","id":"112ba871-71f6-4a07-8931-5d06cf5ab6c8","astNodeIds":["4ab32796-31b0-40c6-ad9f-3297f7262b53"]},{"text":"User enters Apple userId","id":"158009c3-10fd-49e3-8bc7-80fa2cdc8c98","astNodeIds":["a8ceae61-123e-44db-b7d5-435e03713ecc"]},{"text":"User enters Apple password","id":"92d0a936-dc32-44b4-8bc8-bcae4e8375b7","astNodeIds":["ac080be9-5beb-4486-ab88-a2cb4b81cbaf"]},{"text":"User click on sign in arrow","id":"7a9fd95a-f1ca-456f-a18f-463ca321ced5","astNodeIds":["897a7bdb-7f2f-4d27-bde6-6897be4ca72c"]},{"text":"Signed up succesfully by Apple account","id":"39ce4237-2ba0-4a28-b48c-b7344f095737","astNodeIds":["b99430b0-83a3-44fb-8dc6-ea396058b77b"]}],"astNodeIds":["e22ce7dd-50db-473a-831a-c6713acfdab1"]}},{"pickle":{"id":"c0606a36-cc2f-41b3-912c-2a53328efa51","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","name":"To verify that the user able to switch accounts","language":"en","steps":[{"text":"User is in home page","id":"a8c25200-b4db-4c2d-89a8-88974ac3b803","astNodeIds":["d0a8f610-665c-4258-a239-e5625ac61d47"]},{"text":"User click on the Sign in","id":"085921a1-e753-4494-89be-5cfebdcdf683","astNodeIds":["7bb77031-7aad-489f-aca2-5863b18fdf0a"]},{"text":"User mistakely enters wrong Email or username","id":"af0c2c26-ad3d-4ec5-9c49-63b9cfa61987","astNodeIds":["c748e53e-b5c0-4157-9a05-18c7dfb1b912"]},{"text":"User click on Continue","id":"5ef7a882-d92d-4315-ab5b-b9cb8072b0ad","astNodeIds":["92e4f039-ff7c-4e91-b24f-f6a9203c607f"]},{"text":"User click on Switch account link","id":"d35f8408-70d8-47c4-baa8-a1433ea8181c","astNodeIds":["4cac7b3f-3c82-4534-94b3-81de20462c39"]},{"text":"User enter correct  Email or username","id":"bd568ad8-4441-40e2-8a20-0a3fcf3ff338","astNodeIds":["ba8b4b9f-fa7f-40fe-b61b-e24ac5f073db"]},{"text":"user account is changed","id":"b1ed1e67-e899-4ebc-b4fa-5d23b27d4223","astNodeIds":["9a404c8f-d452-4370-8892-c0bc2800962f"]}],"astNodeIds":["b2bd6c0e-3f4c-4b0d-a698-34ca13a12566"]}},{"pickle":{"id":"a03034ce-f19f-4189-8115-772e33bd8016","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Sign_in.feature","name":"To verify the user is able to get OTP on register email and phone number","language":"en","steps":[{"text":"User is in home page","id":"216bf390-09aa-44c5-8423-2245b49170fe","astNodeIds":["d3d88cd0-548c-4d15-80af-982dde121ecb"]},{"text":"User click on the Sign in","id":"e8f0ebea-47e7-4fd0-943b-6d32d6905588","astNodeIds":["9516b679-ccb5-401b-94db-4aff7d4666af"]},{"text":"User enters the Email or username","id":"a5994986-4963-4a37-a2dc-4f53c0efc963","astNodeIds":["038d2555-fe72-4794-9cef-223b7c0ffde8"]},{"text":"User click on Continue","id":"4e5effd8-3a8f-4b6a-88d9-00780a55a901","astNodeIds":["68148fb4-2e5b-4846-b2c4-9213947be097"]},{"text":"User clicks on Need help signing in?","id":"07d01901-e300-47c5-b638-d0f22fe2e466","astNodeIds":["1dca65b8-e108-422d-90bb-51d6d2d972be"]},{"text":"in Email Click on Receive email","id":"3aaf8358-04c6-4c55-8e4e-97cb67b2b76a","astNodeIds":["a8ae2b2f-9783-43f8-a0f0-140a12566d1f"]},{"text":"Enter OTP received on registered email","id":"74fc773f-e6b7-4414-b91a-0ab8f9099be8","astNodeIds":["34935f21-37dc-4195-a595-aa851f7d40a7"]},{"text":"Ater entering opt recieved in email and click Continue","id":"67931d1d-8765-4a38-8808-e447b2e0271c","astNodeIds":["dd90e37f-53f7-4ab7-ba48-95ddc3fa58a2"]},{"text":"User reached the home page","id":"4cb88085-c71f-4269-8c7b-daee31edded8","astNodeIds":["0e86de5e-e4c3-4cb8-97bf-b2c6844d4031"]}],"astNodeIds":["da3a1a6a-0e26-4d42-96cb-442c6005352d"]}},{"source":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Url.feature","data":"Feature: Ebay Url\r\n\r\nScenario: To Validate the Title of the Ebay\r\nGiven User is in the Login Page\r\nThen The title of the page should be \"Electronics, Cars, Fashion, Collectibles \u0026 More | eBay\"\r\n ","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Url.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"Ebay Url","children":[{"scenario":{"location":{"line":3,"column":1},"keyword":"Scenario","name":"To Validate the Title of the Ebay","steps":[{"location":{"line":4,"column":1},"keyword":"Given ","text":"User is in the Login Page","id":"31646753-bdf2-499a-8825-deae95163d70"},{"location":{"line":5,"column":1},"keyword":"Then ","text":"The title of the page should be \"Electronics, Cars, Fashion, Collectibles \u0026 More | eBay\"","id":"66a19d7e-e8c7-429d-a027-e916f011af15"}],"id":"978ea48a-7618-42c5-9017-fd9aed1f1925"}}]}}},{"pickle":{"id":"afd979f3-0ea8-4ae1-aa9c-3ef1f085673b","uri":"file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Url.feature","name":"To Validate the Title of the Ebay","language":"en","steps":[{"text":"User is in the Login Page","id":"8d854ccd-b763-4a42-ba7d-ca085af1636f","astNodeIds":["31646753-bdf2-499a-8825-deae95163d70"]},{"text":"The title of the page should be \"Electronics, Cars, Fashion, Collectibles \u0026 More | eBay\"","id":"21d25c34-3b50-4d0a-8ac6-8e86cd267302","astNodeIds":["66a19d7e-e8c7-429d-a027-e916f011af15"]}],"astNodeIds":["978ea48a-7618-42c5-9017-fd9aed1f1925"]}},{"testCase":{"id":"b4a0978a-1c21-4a16-8cc1-e332cffe5b6f","pickleId":"ab39cbd1-4373-4143-9d2f-25d6b298afda","testSteps":[{"id":"75ece2c1-b830-45dd-abd1-a9f8958e4c27","pickleStepId":"6cebd6ff-7947-41e8-9a42-a84c320f5e5b","stepDefinitionIds":["d006bf4b-64df-4f4f-a0ea-35be77ea0f96"],"stepMatchArgumentsLists":[{}]},{"id":"b2f79d0f-d8b7-4abb-9c47-bd39cbb96582","pickleStepId":"6afa5075-c4ec-4849-ae07-06d0038b3fdd","stepDefinitionIds":["d8931996-2baa-4828-bdb4-67d9678e6470"],"stepMatchArgumentsLists":[{}]},{"id":"cf3d7232-3b2d-4031-be7e-276095feb064","pickleStepId":"affa0632-66c1-46f8-93c4-63d4c3087f30","stepDefinitionIds":["ce565c66-cc48-48dd-9265-cfb05785acae"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":31,"value":"zackson"}},{"parameterTypeName":"anonymous","group":{"start":43,"value":"jack"}},{"parameterTypeName":"anonymous","group":{"start":52,"value":"zacksonmade23@gmail.com"}},{"parameterTypeName":"anonymous","group":{"start":80,"value":"jacHHe@!3366"}}]}]},{"id":"df4dba0c-89a5-4674-92ec-c0724c386d34","pickleStepId":"f00ba90a-ba68-4b7f-82ed-91d438cdd05b","stepDefinitionIds":["a8caf9ec-1580-4db2-bdfd-93daa238a2fb"],"stepMatchArgumentsLists":[{}]},{"id":"26902ee8-2714-422c-89e2-315673134edc","pickleStepId":"c5b5985a-98bb-4e4a-bc56-94967cfa348f","stepDefinitionIds":["91727929-82dc-4e0b-86f6-38f3a4ea1d7a"],"stepMatchArgumentsLists":[{}]}]}},{"testCaseStarted":{"timestamp":{"seconds":"1634634066","nanos":925390100},"testCaseId":"b4a0978a-1c21-4a16-8cc1-e332cffe5b6f","id":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepStarted":{"timestamp":{"seconds":"1634634066","nanos":931386600},"testStepId":"75ece2c1-b830-45dd-abd1-a9f8958e4c27","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"8","nanos":546848400}},"timestamp":{"seconds":"1634634075","nanos":478235000},"testStepId":"75ece2c1-b830-45dd-abd1-a9f8958e4c27","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepStarted":{"timestamp":{"seconds":"1634634075","nanos":490225200},"testStepId":"b2f79d0f-d8b7-4abb-9c47-bd39cbb96582","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"25","nanos":694183900}},"timestamp":{"seconds":"1634634101","nanos":184409100},"testStepId":"b2f79d0f-d8b7-4abb-9c47-bd39cbb96582","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepStarted":{"timestamp":{"seconds":"1634634101","nanos":184409100},"testStepId":"cf3d7232-3b2d-4031-be7e-276095feb064","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepFinished":{"testStepResult":{"status":"PASSED","duration":{"seconds":"20","nanos":685437700}},"timestamp":{"seconds":"1634634121","nanos":869846800},"testStepId":"cf3d7232-3b2d-4031-be7e-276095feb064","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepStarted":{"timestamp":{"seconds":"1634634121","nanos":872845300},"testStepId":"df4dba0c-89a5-4674-92ec-c0724c386d34","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepFinished":{"testStepResult":{"status":"FAILED","message":"org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cbutton name\u003d\"EMAIL_REG_FORM_SUBMIT\" id\u003d\"EMAIL_REG_FORM_SUBMIT\" class\u003d\"btn btn--primary btn--large btn--fluid\" disabled\u003d\"\" type\u003d\"submit\" aria-describedby\u003d\"legalTextId\" data-click-tracking-data\u003d\"{\u0026quot;linkId\u0026quot;:47252,\u0026quot;pageId\u0026quot;:\u0026quot;2560839\u0026quot;,\u0026quot;type\u0026quot;:\u0026quot;_plsr\u0026quot;,\u0026quot;payload\u0026quot;:{\u0026quot;RegModuleName\u0026quot;:\u0026quot;PARTIAL_REG_PERSONAL_EMAIL\u0026quot;,\u0026quot;bs\u0026quot;:203,\u0026quot;ul\u0026quot;:\u0026quot;en-US\u0026quot;,\u0026quot;uc\u0026quot;:95}}\"\u003e...\u003c/button\u003e is not clickable at point (508, 451). Other element would receive the click: \u003ciframe id\u003d\"captchaFrame\" src\u003d\"/captcharouter_challenge?ap\u003d1\u0026amp;iim\u003dsNDkuMjB\u0026amp;iia\u003dMgA0LjE0Mg\u0026amp;iiz\u003dmATMC4yMzc*jyN\u0026amp;ru\u003dhttps%3A%2F%2Fsignup.ebay.com%2Fajax%2Fvalidatefield\u0026amp;iid\u003df5ac7d0f-de6c-4041-9487-dd57179c8484\" style\u003d\"position: fixed; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; border: 0px; background-color: white; z-index: 99999;\"\u003e\u003c/iframe\u003e\n  (Session info: chrome\u003d94.0.4606.81)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-N4DS0TK\u0027, ip: \u0027192.168.42.87\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002716.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\\Users\\HARIKA~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:49478}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: bd27f628b94bbff44ce71a5b8c5c1b8e\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat jdk.proxy2/jdk.proxy2.$Proxy18.click(Unknown Source)\r\n\tat com.pages.Register.Preg(Register.java:84)\r\n\tat StepDefinition.Register_StepDef.user_clicks_on_the_register_button(Register_StepDef.java:33)\r\n\tat ?.User clicks on the Register button(file:///C:/Users/HARIKARAN/eclipse-workspace/Sprint_2/./src/test/java/Features/Register.feature:6)\r\n","duration":{"seconds":"1","nanos":222535300}},"timestamp":{"seconds":"1634634123","nanos":95380600},"testStepId":"df4dba0c-89a5-4674-92ec-c0724c386d34","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepStarted":{"timestamp":{"seconds":"1634634123","nanos":101377100},"testStepId":"26902ee8-2714-422c-89e2-315673134edc","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testStepFinished":{"testStepResult":{"status":"SKIPPED","duration":{}},"timestamp":{"seconds":"1634634123","nanos":101377100},"testStepId":"26902ee8-2714-422c-89e2-315673134edc","testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testCaseFinished":{"timestamp":{"seconds":"1634634123","nanos":101377100},"testCaseStartedId":"de5b7713-063d-43a5-ada3-44f11e01544b"}},{"testCase":{"id":"038c69bb-d9f9-42e5-a8ec-36cca527f9ad","pickleId":"fc3021f0-8e1e-44f9-84a8-f8e361c497b9","testSteps":[{"id":"4bcb02b5-12da-4297-9f52-045466f9b712","pickleStepId":"d093d3b4-49b9-4ce3-908d-6fd69cee5423","stepDefinitionIds":["f85c6c25-d0f1-4189-8994-3a4d14e643a4"],"stepMatchArgumentsLists":[{}]},{"id":"3a18b1f2-c27e-4b40-9e63-1f5fb82c77f5","pickleStepId":"d77c917c-a2ee-416c-8a8c-f6819b093363","stepDefinitionIds":["4a9de863-dc5a-45bd-a415-95e42a869b75"],"stepMatchArgumentsLists":[{}]},{"id":"909a854e-a621-4c04-b414-afb1f9c3b643","pickleStepId":"4a26c048-1a50-4d46-8353-3024047b7dea","stepDefinitionIds":["3ddd2f98-f13d-4bec-9e3c-33d7114b048d"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"anonymous","group":{"start":31,"value":"justice"}},{"parameterTypeName":"anonymous","group":{"start":43,"value":"penakat"}},{"parameterTypeName":"anonymous","group":{"start":55,"value":"znyderkat@gmail.com"}},{"parameterTypeName":"anonymous","group":{"start":79,"value":"treatRR@3388"}}]}]},{"id":"264b5a9f-7994-4189-afa0-265e43c1f33e","pickleStepId":"a3c33d7b-6b5e-4d3e-a2fe-368c78cc9ee3","stepDefinitionIds":["7b6661f2-d5c7-43d5-a7a4-cc5d81054d07"],"stepMatchArgumentsLists":[{}]},{"id":"a7ff4437-5d12-4a9a-ac3a-321d76599506","pickleStepId":"9b3a436a-152a-423d-9753-3a95cd586a95","stepDefinitionIds":["ded77d01-ccc8-48bb-856f-002d95f1efeb"],"stepMatchArgumentsL
